@@ -21,17 +21,14 @@ export function setRecentSlugs(slugs) {
 
 
 export function addRecentSlug(slug) {
-    if (!slug) return
 
-    const previos = getRecentSlugs();
+    const previo = getRecentSlugs();
 
-    let nuevo = [];
+    // Quitamos el slug si ya existía (para moverlo al inicio)
+    const limpio = previo.filter((s) => s !== slug);
 
-    const limpio =  previos.filter((s) => s !== slug);
-
-    if (!previos.includes(slug)) {
-        nuevo = [slug, ...limpio];
-    }
+    // Lo colocamos delante
+    const nuevo = [slug, ...limpio];
 
     setRecentSlugs(nuevo);
 
