@@ -45,6 +45,8 @@ import { useParams, Link } from "react-router-dom";
 */
 
 import { PROVINCES } from "../data/provincesES";
+
+
 /*
   PROVINCES:
   - Array local con datos de provincias españolas.
@@ -70,6 +72,8 @@ export default function ProvinceWeather() {
       dinámicos de la ruta.
     */
     const { slug } = useParams();
+
+
 
     /*
       2) BUSCAR LA PROVINCIA A PARTIR DEL SLUG
