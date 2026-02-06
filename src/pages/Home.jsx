@@ -64,6 +64,7 @@ export default function Home() {
 
       {/* Texto explicativo para guiar al usuario */}
       <p>Selecciona la provincia</p>
+      
 
       {/* Un label para asociar texto + select (accesibilidad) */}
       <label>

@@ -171,6 +171,15 @@ export default function RecentProvinces() {
                     */}
                     <ul>
                         
+                        {recentProvinces.map((p) =>(
+
+                          <li key={p.slug}>
+                            <Link to={`/provincia/${p.slug}`}>
+                              {p.name} - capital: {p.capital}
+                            </Link>
+                          </li>
+
+                        ))}
                     </ul>
                 </>
             )}
