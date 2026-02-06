@@ -46,6 +46,8 @@ import { useParams, Link } from "react-router-dom";
 
 import { PROVINCES } from "../data/provincesES";
 
+import { addRecentSlug } from "../utils/recentProvinces";
+
 
 /*
   PROVINCES:
@@ -73,6 +75,9 @@ export default function ProvinceWeather() {
     */
     const { slug } = useParams();
 
+    useEffect(() => {
+      addRecentSlug(slug);
+    }, [slug]);
 
 
     /*

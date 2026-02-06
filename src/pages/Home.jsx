@@ -10,6 +10,8 @@ import { useNavigate } from "react-router-dom";
 // - Aquí lo usaremos para generar dinámicamente las opciones del <select>.
 import { PROVINCES } from "../data/provincesES";
 
+import { Link } from "react-router-dom";
+
 // Exportamos por defecto el componente Home.
 // - "Home" es un componente React (una función que devuelve JSX).
 // - Es la página principal donde el usuario elige una provincia.
@@ -62,8 +64,14 @@ export default function Home() {
       {/* Título principal de la página */}
       <h1>Meteo Power , tiempo por provincias</h1>
 
+      <p>
+        <Link to="/recientes">Ver recientes</Link>
+      </p>
+
       {/* Texto explicativo para guiar al usuario */}
       <p>Selecciona la provincia</p>
+
+
       
 
       {/* Un label para asociar texto + select (accesibilidad) */}
